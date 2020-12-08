@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 100
-//3 2 1 3 4 1 6 2 4 3 4 2 1 4 5 2 1 3 4
+//3 2 1 3 4 1 6 2 4 3 4 2 1 4 5 2 1 3 4 : 3
+//7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1 : 3
 
 struct node {
 int priority;
@@ -21,7 +22,7 @@ void createNode()
     struct node *p = (struct node *)malloc(sizeof(struct node));
 
 	p->priority = 0;
-	p->data = 0;
+	p->data = -1;
     p->next=NULL;
 
     if(start == NULL){

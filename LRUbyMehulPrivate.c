@@ -21,7 +21,7 @@ void createNode()
     struct node *p = (struct node *)malloc(sizeof(struct node));
 
 	p->priority = 0;
-	p->data = 0;
+	p->data = -1;		//Set as -1 because there can exist a PAGE with Number 0. Aim is to assign default value as minimum as possible minimum
     p->next=NULL;
 
     if(start == NULL){
